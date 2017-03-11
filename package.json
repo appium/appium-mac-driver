@@ -1,0 +1,61 @@
+{
+  "name": "appium-mac-driver",
+  "version": "1.0.0",
+  "description": "Appium bridge to AppiumForMac",
+  "keywords": [
+    "appium",
+    "mac",
+    "AppiumForMac"
+  ],
+  "author": "appium",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/appium-mac-driver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appium/appium-mac-driver/issues"
+  },
+  "engines": [
+    "node"
+  ],
+  "main": "./build/index.js",
+  "bin": {},
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "appium-base-driver": "^2.0.1",
+    "appium-support": "^2.5.0",
+    "asyncbox": "^2.3.1",
+    "babel-runtime": "=5.8.24",
+    "bluebird": "^2.9.32",
+    "lodash": "^4.6.1",
+    "punycode": "^2.0.0",
+    "request-promise": "^3.0.0",
+    "source-map-support": "^0.3.1",
+    "teen_process": "^1.7.0",
+    "yargs": "^3.10.0"
+  },
+  "scripts": {
+    "prepublish": "./node_modules/.bin/gulp prepublish",
+    "test": "./node_modules/.bin/gulp once",
+    "watch": "./node_modules/.bin/gulp",
+    "install": "node install-npm.js"
+  },
+  "devDependencies": {
+    "appium-gulp-plugins": "^1.4.0",
+    "appium-test-support": "0.0.5",
+    "babel-eslint": "^6.1.2",
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "eslint": "^2.12.0",
+    "eslint-config-appium": "0.0.6",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-import": "^1.10.3",
+    "eslint-plugin-mocha": "^3.0.0",
+    "gulp": "^3.8.11",
+    "sinon": "^1.17.4",
+    "wd": "^0.4.0"
+  }
+}
