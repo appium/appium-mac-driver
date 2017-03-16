@@ -20,7 +20,7 @@ describe('driver.js', () => {
   describe('createSession', () => {
     it('should set sessionId', async () => {
       let driver = new MacDriver({app: 'myapp'}, false);
-      sinon.mock(driver).expects('startAppium4MacDriverSession')
+      sinon.mock(driver).expects('startAppiumForMacSession')
           .once()
           .returns(Promise.resolve());
       await driver.createSession({cap: 'foo'});

@@ -2,13 +2,13 @@
 
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import AppiumForMacDriverServer from '../../lib/appium4macdriver';
+import AppiumForMac from '../../lib/appium-for-mac';
 import { withMocks } from 'appium-test-support';
 
 chai.should();
 chai.use(chaiAsPromised);
 
-function buildAppium4MacDriverOpts () {
+function buildAppiumForMacOpts () {
   return {
     app: 'foo',
     platformName: 'Mac',
@@ -17,9 +17,9 @@ function buildAppium4MacDriverOpts () {
   };
 }
 
-describe('Appium4MacDriverServer', () => {
+describe('AppiumForMac', () => {
   describe('#startSession', withMocks({ }, (mocks, S) => {
-    let appium4MacDriver = new AppiumForMacDriverServer(buildAppium4MacDriverOpts());
+    let appium4MacDriver = new AppiumForMac(buildAppiumForMacOpts());
 
     it('should start a session', async () => {
       let caps = {foo: 'bar'};
