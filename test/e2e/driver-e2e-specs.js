@@ -29,9 +29,11 @@ describe('Driver', () => {
 
   it('should run a basic session using a real client', async () => {
     await driver.init({
-      app: "Calculator.app",
-      platformName: "Mac"
+      app: "Calculator",
+      platformName: "Mac",
+      deviceName: "Mac",
     });
-    await driver.elementByXPath("/AXApplication[@AXTitle='Calculator']/AXWindow[0]");
+    let button = await driver.elementByXPath("/AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='nine']");
+    await button.click();
   });
 });
