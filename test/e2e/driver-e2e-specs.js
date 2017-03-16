@@ -1,5 +1,4 @@
 import wd from 'wd';
-import { sleep } from 'asyncbox';
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import { startServer } from '../../lib/server';
@@ -30,10 +29,10 @@ describe('Driver', () => {
 
   it('should run a basic session using a real client', async () => {
     await driver.init({
+      app: "Calculator",
       platformName: "Mac",
       deviceName: "Mac",
     });
-    await driver.get("Calculator");
     let button = await driver.elementByXPath("/AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='nine']");
     await button.click();
   });
