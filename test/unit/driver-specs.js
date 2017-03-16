@@ -11,7 +11,7 @@ chai.use(chaiAsPromised);
 describe('driver.js', () => {
   describe('constructor', () => {
     it('calls BaseDriver constructor with opts', () => {
-      let driver = new MacDriver({ foo: 'bar' });
+      let driver = new MacDriver({foo: 'bar'});
       driver.should.exist;
       driver.opts.foo.should.equal('bar');
     });
@@ -19,11 +19,11 @@ describe('driver.js', () => {
 
   describe('createSession', () => {
     it('should set sessionId', async () => {
-      let driver = new MacDriver({ app: 'myapp'}, false);
+      let driver = new MacDriver({app: 'myapp'}, false);
       sinon.mock(driver).expects('startAppium4MacDriverSession')
           .once()
           .returns(Promise.resolve());
-      await driver.createSession({ cap: 'foo' });
+      await driver.createSession({cap: 'foo'});
       driver.sessionId.should.exist;
       driver.caps.cap.should.equal('foo');
     });
@@ -43,7 +43,7 @@ describe('driver.js', () => {
         driver.proxyActive('abc').should.be.true;
       });
       it('should throw an error if session id is wrong', () => {
-        (() => { driver.proxyActive('aaa'); }).should.throw;
+        (() => {driver.proxyActive('aaa');}).should.throw;
       });
     });
 
@@ -55,7 +55,7 @@ describe('driver.js', () => {
         driver.canProxy('abc').should.be.true;
       });
       it('should throw an error if session id is wrong', () => {
-        (() => { driver.canProxy('aaa'); }).should.throw;
+        (() => {driver.canProxy('aaa'); }).should.throw;
       });
     });
   });

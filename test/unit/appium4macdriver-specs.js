@@ -22,10 +22,10 @@ describe('Appium4MacDriverServer', () => {
     let appium4MacDriver = new AppiumForMacDriverServer(buildAppium4MacDriverOpts());
 
     it('should start a session', async () => {
-      let caps = { foo: 'bar' };
+      let caps = {foo: 'bar'};
       mocks.jwproxy = S.sandbox.mock(appium4MacDriver.jwproxy);
       mocks.jwproxy.expects("command").once()
-        .withExactArgs("/session", "POST", { desiredCapabilities: caps })
+        .withExactArgs("/session", "POST", {desiredCapabilities: caps})
         .returns(Promise.resolve());
       await appium4MacDriver.startSession(caps);
       mocks.jwproxy.verify();
