@@ -10,7 +10,7 @@ npm install appium-mac-driver
 ```
 
 ## Usage
-Import Mac Driver, set [desired capabilities](http://appium.io/slate/en/1.5/?javascript#appium-server-capabilities) and create a session:
+Import Mac Driver, set [desired capabilities](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md) and create a session:
 
 ```
 import { MacDriver } from `appium-mac-driver`
