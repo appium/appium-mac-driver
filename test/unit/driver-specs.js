@@ -27,6 +27,19 @@ describe('driver.js', () => {
       driver.sessionId.should.exist;
       driver.caps.cap.should.equal('foo');
     });
+    it('should set sessionId (W3C)', async () => {
+      let driver = new MacDriver({app: 'myapp'}, false);
+      driver.shouldValidateCaps = false;
+      sinon.mock(driver).expects('startAppiumForMacSession')
+          .once()
+          .returns(Promise.resolve());
+      await driver.createSession(null, null, {
+        alwaysMatch: {cap: 'foo'},
+        firstMatch: [{}],
+      });
+      driver.sessionId.should.exist;
+      driver.caps.cap.should.equal('foo');
+    });
   });
 
   describe('proxying', () => {
