@@ -17,11 +17,11 @@ function buildAppiumForMacOpts () {
   };
 }
 
-describe('AppiumForMac', () => {
+describe('AppiumForMac', function () {
   describe('#startSession', withMocks({ }, (mocks, S) => {
     let appium4MacDriver = new AppiumForMac(buildAppiumForMacOpts());
 
-    it('should start a session', async () => {
+    it('should start a session', async function () {
       let caps = {foo: 'bar'};
       mocks.jwproxy = S.sandbox.mock(appium4MacDriver.jwproxy);
       mocks.jwproxy.expects("command").once()
