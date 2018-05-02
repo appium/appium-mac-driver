@@ -1,6 +1,9 @@
 "use strict";
 
-var gulp = require('gulp'),
-    boilerplate = require('appium-gulp-plugins').boilerplate.use(gulp);
+const gulp = require('gulp');
+const boilerplate = require('appium-gulp-plugins').boilerplate.use(gulp);
 
-boilerplate({build: 'appium-mac-driver', jscs: false, testTimeout: 30000});
+boilerplate({
+  build: 'appium-mac-driver',
+  testTimeout: 30000
+});
