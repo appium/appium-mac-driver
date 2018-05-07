@@ -3,4 +3,4 @@ build
 *.log
 .vscode
 .idea
-package-lock.json
+package-lock.json*

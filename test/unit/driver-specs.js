@@ -4,6 +4,8 @@ import MacDriver from '../..';
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
 import sinon from 'sinon';
+import B from 'bluebird';
+
 
 chai.should();
 chai.use(chaiAsPromised);
@@ -22,7 +24,7 @@ describe('driver.js', function () {
       let driver = new MacDriver({app: 'myapp'}, false);
       sinon.mock(driver).expects('startAppiumForMacSession')
           .once()
-          .returns(Promise.resolve());
+          .returns(B.resolve());
       await driver.createSession({cap: 'foo'});
       driver.sessionId.should.exist;
       driver.caps.cap.should.equal('foo');
@@ -32,7 +34,7 @@ describe('driver.js', function () {
       driver.shouldValidateCaps = false;
       sinon.mock(driver).expects('startAppiumForMacSession')
           .once()
-          .returns(Promise.resolve());
+          .returns(B.resolve());
       await driver.createSession(null, null, {
         alwaysMatch: {cap: 'foo'},
         firstMatch: [{}],

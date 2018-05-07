@@ -1,7 +1,7 @@
 Appium Mac Driver
 ===================
 
-Appium Mac Driver is a test automation tool for Mac aps
+Appium Mac Driver is a test automation tool for Mac apps
 
 
 ## Installation
@@ -26,19 +26,17 @@ await driver.createSession(defaultCaps);
 ## Watch code for changes, re-transpile and run unit tests:
 
 ```
-gulp
+npm run test
 ```
 
 ## Test
 
-
 You can run unit and e2e tests:
-
 
 ```
 // unit tests:
-gulp once
+npm run test
 
 // e2e tests
-gulp e2e-test
+npm run e2e-test
 ```
