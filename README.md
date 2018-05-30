@@ -1,6 +1,8 @@
 Appium Mac Driver
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/appium/appium-mac-driver.svg)](https://greenkeeper.io/)
+
 Appium Mac Driver is a test automation tool for Mac apps
 
 
