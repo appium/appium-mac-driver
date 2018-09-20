@@ -1,6 +1,6 @@
 {
   "name": "appium-mac-driver",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Appium bridge to AppiumForMac",
   "keywords": [
     "appium",
