@@ -4,7 +4,10 @@
 import yargs from 'yargs';
 import { asyncify } from 'asyncbox';
 import { startServer } from './lib/server';
-import { MacDriver } from './lib/driver';
+import * as driver from './lib/driver';
+
+
+const { MacDriver } = driver;
 
 const DEFAULT_HOST = "localhost";
 const DEFAULT_PORT = 4723;
