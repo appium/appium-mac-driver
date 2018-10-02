@@ -22,4 +22,3 @@ if (require.main === module) {
 export { MacDriver };
 
 export default MacDriver;
-
