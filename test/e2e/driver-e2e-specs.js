@@ -6,7 +6,7 @@ chai.should();
 chai.use(chaiAsPromised);
 
 const TEST_PORT = 4788;
-const TEST_HOST = "localhost";
+const TEST_HOST = 'localhost';
 
 let server, driver;
 
@@ -29,9 +29,9 @@ describe('Driver', function () {
 
   it('should run a basic session using a real client', async function () {
     await driver.init({
-      app: "Calculator",
-      platformName: "Mac",
-      deviceName: "Mac",
+      app: 'Calculator',
+      platformName: 'Mac',
+      deviceName: 'Mac',
     });
     let button = await driver.elementByXPath("/AXApplication[@AXTitle='Calculator']/AXWindow[0]/AXGroup[1]/AXButton[@AXDescription='nine']");
     await button.click();

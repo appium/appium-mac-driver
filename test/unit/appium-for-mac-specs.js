@@ -1,4 +1,4 @@
-﻿// transpile:mocha
+// transpile:mocha
 
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
@@ -30,8 +30,8 @@ describe('AppiumForMac', function () {
     it('should start a session', async function () {
       let caps = {foo: 'bar'};
       S.mocks.jwproxy = S.sandbox.mock(appium4MacDriver.jwproxy);
-      S.mocks.jwproxy.expects("command").once()
-        .withExactArgs("/session", "POST", {desiredCapabilities: caps})
+      S.mocks.jwproxy.expects('command').once()
+        .withExactArgs('/session', 'POST', {desiredCapabilities: caps})
         .returns(B.resolve());
       await appium4MacDriver.startSession(caps);
     });
