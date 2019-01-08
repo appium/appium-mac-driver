@@ -9,7 +9,7 @@ import * as driver from './lib/driver';
 
 const { MacDriver } = driver;
 
-const DEFAULT_HOST = "localhost";
+const DEFAULT_HOST = 'localhost';
 const DEFAULT_PORT = 4723;
 
 async function main () {
