@@ -1,7 +1,6 @@
 // transpile:mocha
 
 import MacDriver from '../..';
-import AppiumForMac from '../../lib/appium-for-mac';
 
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
@@ -77,17 +76,6 @@ describe('driver.js', function () {
     });
 
     describe('#execute', function () {
-      it('should be called', async function () {
-        const stbA4mDriver = new AppiumForMac();
-        driver.relaxedSecurityEnabled = true;
-        driver.a4mDriver = stbA4mDriver;
-        sinon.mock(stbA4mDriver).expects('sendCommand')
-          .withExactArgs('/session/abc/execute', 'POST', {script: 'script', args: 'args'})
-          .once()
-          .returns('');
-        await driver.execute('script', 'args').should.eventually.exist;
-      });
-
       it('should raise when relaxed security is off', async function () {
         driver.relaxedSecurityEnabled = false;
         await driver.execute('script', 'args').should.eventually.be.rejected;
