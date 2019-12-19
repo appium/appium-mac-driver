@@ -42,3 +42,10 @@ npm run test
 // e2e tests
 npm run e2e-test
 ```
+
+## Opt-In Features (With Security Risk)
+These can be enabled when running this driver through Appium, via the `--allow-insecure` or `--relaxed-security` flags.
+
+|Feature Name|Description|
+|------------|-----------|
+|`system_shell`|Allows to execute shell script on the machine. Read https://github.com/appium/appium-mac-driver/pull/38 |
