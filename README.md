@@ -48,4 +48,4 @@ These can be enabled when running this driver through Appium, via the `--allow-i
 
 |Feature Name|Description|
 |------------|-----------|
-|`system_shell`|Allows to execute shell script on the machine. Read [appium-mac-driver#38](https://github.com/appium/appium-mac-driver/pull/38) for the implementation |
+|`system_shell`|Allows to execute shell scripts on the machine. Read [appium-mac-driver#38](https://github.com/appium/appium-mac-driver/pull/38) for more details on the implementation |
