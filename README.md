@@ -49,3 +49,32 @@ These can be enabled when running this driver through Appium, via the `--allow-i
 |Feature Name|Description|
 |------------|-----------|
 |`system_shell`|Allows to execute shell scripts on the machine. Read [appium-mac-driver#38](https://github.com/appium/appium-mac-driver/pull/38) for more details on the implementation |
+
+## Desired Capabilities
+
+Should be same for [Appium](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md)
+
+Differences are noted here:
+
+### Handling Appium for mac
+
+
+|Capability|Description|Values|
+|----------|-----------|------|
+| `AppiumForMac` | Specify the host name to the app for mac application. Defaults to `127.0.0.1` | e.g., `localhost` |
+| `a4mPort` | Specify the port to the app for mac application. Defaults to `4622` | e.g, `4622`, `8080` |
+| `a4mAppPath` | Specify the path to the app for mac application. It helps to launch `AppiumForMac` application in a custom path. Defaults to `/Applications/AppiumForMac.app` | e.g, `/Applications/CustomAppiumForMac.app` |
+| `killAllA4MAppBeforeStart` | Kill all running processes named `AppiumForMac` not to remain the process in next Appium session run. Please disable this value when you run multiple `AppiumForMac` on the machine. Defaults to `true` | `false`, `true` |
+| `implicitTimeout` |  | |
+| `loopDelay` |  | |
+| `commandDelay` |  | |
+| `mouseMoveSpeed` |  | |
+| `diagnosticsDirectoryLocation` |  | |
+| `screenShotOnError` |  | |
+
+
+### Customize the port of AppiumForMac
+
+You can launch multiple `AppiumForMac` on the host machine to run tests in parallel.
+Please consider to set `a4mPort`, `a4mAppPath` and `killAllA4MAppBeforeStart` to handle multiple Appium sessions on the machine.
+You must modify [the port number in appium-for-mac](https://github.com/appium/appium-for-mac/blob/2356957dc73b6275262c918ca8f4184ef4a25af0/AppiumForMac/AppiumForMacAppDelegate.m#L36) and build the app to coordinate the port number in `AppiumForMac` side.
