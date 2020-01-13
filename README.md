@@ -77,4 +77,4 @@ Differences are noted here:
 
 You can launch multiple `AppiumForMac` on the host machine to run tests in parallel.
 Please consider to set `a4mPort`, `a4mAppPath` and `killAllA4MAppBeforeStart` to handle multiple Appium sessions on the machine.
-You must modify [the port number in appium-for-mac](https://github.com/appium/appium-for-mac/blob/2356957dc73b6275262c918ca8f4184ef4a25af0/AppiumForMac/AppiumForMacAppDelegate.m#L36) and build the app to coordinate the port number in `AppiumForMac` side.
+You must modify [the port number in appium-for-mac](https://github.com/appium/appium-for-mac/blob/2356957dc73b6275262c918ca8f4184ef4a25af0/AppiumForMac/AppiumForMacAppDelegate.m#L36) and build the app to coordinate the port number in `AppiumForMac` side. Do not forget to handle your test scenarios properly not to conflict each other since scenarios running on the same machine can be conflict.
