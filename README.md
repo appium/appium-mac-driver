@@ -48,7 +48,7 @@ These can be enabled when running this driver through Appium, via the `--allow-i
 
 |Feature Name|Description|
 |------------|-----------|
-|`system_shell`|Allows to execute shell scripts on the machine. Read [appium-mac-driver#38](https://github.com/appium/appium-mac-driver/pull/38) for more details on the implementation |
+|`system_shell`|Allows to execute shell scripts on the same machine. Read [appium-mac-driver#38](https://github.com/appium/appium-mac-driver/pull/38) for more details on the implementation |
 
 ## Desired Capabilities
 
@@ -64,7 +64,7 @@ Differences are noted here:
 | `AppiumForMac` | Specify the host name to the app for mac application. Defaults to `127.0.0.1` | e.g., `localhost` |
 | `a4mPort` | Specify the port to the app for mac application. Defaults to `4622` | e.g, `4622`, `8080` |
 | `a4mAppPath` | Specify the path to the app for mac application. It helps to launch `AppiumForMac` application in a custom path. Defaults to `/Applications/AppiumForMac.app` | e.g, `/Applications/CustomAppiumForMac.app` |
-| `killAllA4MAppBeforeStart` | Kill all running processes named `AppiumForMac` not to remain the process in next Appium session run. Please disable this value when you run multiple `AppiumForMac` on the machine. Defaults to `true` | `false`, `true` |
+| `killAllA4MAppBeforeStart` | Kill all running processes named `AppiumForMac` not to remain the process in next Appium session run. Please disable this value when you run multiple `AppiumForMac` on the same machine. Defaults to `true` | `false`, `true` |
 | `implicitTimeout` |  | |
 | `loopDelay` |  | |
 | `commandDelay` |  | |
@@ -76,6 +76,6 @@ Differences are noted here:
 ### Customize the port of AppiumForMac / Run tests in parallel
 
 You can launch multiple `AppiumForMac` on a same machine to run tests in parallel.
-Please consider to set `a4mPort`, `a4mAppPath` and `killAllA4MAppBeforeStart` as their capabilities to handle multiple Appium sessions on the machine.
+Please consider to set `a4mPort`, `a4mAppPath` and `killAllA4MAppBeforeStart` as their capabilities to handle multiple Appium sessions on the same machine.
 You must modify [the port number in appium-for-mac](https://github.com/appium/appium-for-mac/blob/2356957dc73b6275262c918ca8f4184ef4a25af0/AppiumForMac/AppiumForMacAppDelegate.m#L36) and build the app to coordinate the port number on `AppiumForMac`. Appium-mac-driver tries to establish a session to the host/port referencing `a4mPort` and `a4mAppPath`.
-Do not forget to handle your test scenarios properly not to conflict each other since the scenarios runs on the machine.
+Do not forget to handle your test scenarios properly not to conflict each other since scenarios run on the same machine.
