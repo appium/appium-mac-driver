@@ -65,13 +65,7 @@ Differences are noted here:
 | `a4mPort` | Specify the port to the app for mac application. Defaults to `4622` | e.g, `4622`, `8080` |
 | `a4mAppPath` | Specify the path to the app for mac application. It helps to launch `AppiumForMac` application in a custom path. Defaults to `/Applications/AppiumForMac.app` | e.g, `/Applications/CustomAppiumForMac.app` |
 | `killAllA4MAppBeforeStart` | Kill all running processes named `AppiumForMac` not to remain the process in next Appium session run. Please disable this value when you run multiple `AppiumForMac` on the same machine. Defaults to `true` | `false`, `true` |
-| `implicitTimeout` |  | |
-| `loopDelay` |  | |
-| `commandDelay` |  | |
-| `mouseMoveSpeed` |  | |
-| `diagnosticsDirectoryLocation` |  | |
-| `screenShotOnError` |  | |
-
+| `cookies` | Set propertires for [appium-for-mac](https://github.com/appium/appium-for-mac). Please read [this section](https://github.com/appium/appium-for-mac#new-session-properties) for more details. | `[{'name': 'implicit_timeout', 'value': 20.5}]` |
 
 ### Customize the port of AppiumForMac / Run tests in parallel
 
