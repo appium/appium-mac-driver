@@ -5,6 +5,8 @@ Appium Mac Driver
 
 Appium Mac Driver is a test automation tool for Mac apps
 
+**Please consider moving to [appium-mac2-driver](https://github.com/appium/appium-mac2-driver) for newer macOS versions at least over 10.15**
+
 
 ## Installation
 ```
