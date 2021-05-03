@@ -39,7 +39,7 @@
     "lodash": "^4.17.4",
     "source-map-support": "^0.5.5",
     "teen_process": "^1.15.0",
-    "yargs": "^16.0.3"
+    "yargs": "^17.0.0"
   },
   "scripts": {
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
